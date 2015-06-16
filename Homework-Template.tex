@@ -1,0 +1,118 @@
+% Warn about outdated commands/packages.
+\RequirePackage[l2tabu, orthodox]{nag}
+
+% Sets paper and font size.
+\documentclass[11pt, a4paper]{article}
+
+
+%%% General formatting packages %%%
+
+% Language specific quirks.
+\usepackage[dutch, english]{babel}
+
+% Improved tables.
+\usepackage{booktabs}
+
+% Additional formatting of captions.
+\usepackage[font=small]{caption}
+
+% Modification of headers and footers.
+\usepackage{fancyhdr}
+
+% Makes one unicode character of special input (e.g. ö).
+\usepackage[T1]{fontenc}
+
+% Control over page layout.
+\usepackage[margin=1.25in]{geometry}
+
+% Additional control over image positions.
+\usepackage{float}
+
+% Include graphics. Use '\graphicspath' to locate files in a different folder.
+\usepackage{graphicx}
+
+% Special characters (e.g. trema) can be entered directly: .tex file has to be saved using UTF-8 encoding.
+\usepackage[utf8]{inputenc}
+
+% Determine total number of pages in document. Requires two renders.
+\usepackage{lastpage}
+
+% Alternative font because 'fontenc' package does not work with default.
+\usepackage{lmodern}
+
+% Improves character spacing.
+\usepackage{microtype}
+
+% Provides (author, year) references. \citet: textual, \citep: parenthetical
+\usepackage{natbib}
+
+% Draw diagrams and figures.
+\usepackage{tikz}
+
+% Allow inclusion of urls in text.
+\usepackage{url}
+
+
+%%% Science/math packages %%%
+
+% Additional formatting for equations.
+\usepackage{amsmath}
+
+% Dirac braket notation.
+\usepackage{braket}
+
+% SI unit formatting and scientific notation.
+\usepackage{siunitx}
+
+
+%%% Additional commands. %%%
+
+% Header for current exercise.
+\newcommand{\exercise}[1]{\vspace{1 em} \hrule \vspace{0.5 em} \textbf{Exercise #1} \vspace{0.5 em} \hrule \vspace{1 em}}
+
+% Marker for current sub exercise.
+\newcommand{\subexercise}[1]{\quad (\textbf{#1})}
+
+
+%%% Formatting: contains metadata such as name and course. %%%
+
+% Set header height.
+\setlength{\headheight}{1.35em}
+
+% Make paragraphs not automatically indent.
+\setlength{\parindent}{0pt}
+
+% Set "fancyhdr" as default style.
+\pagestyle{fancy}
+
+% Clear headers.
+\fancyhf{}
+
+% Content in left part of header.
+\lhead{\#COURSE\#: Homework \#}
+
+% Content in right part of header.
+\rhead{\#NAME\#, \#STUDENTNUMBER\#, Group \#GROUP\#}
+
+% Content in centre part of footer.
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+
+%%% Packages that need to be loaded last. %%%
+
+% Automate "equation (...)" reference.
+\usepackage[noabbrev]{cleveref}
+
+
+\begin{document}
+
+\exercise{1}
+
+\subexercise{a} Lorum ipsum etc...
+
+
+% Set the style and name of your .bib file here. Set style to abbrv to get Vancouver style. 
+\bibliographystyle{} 
+\bibliography{}
+
+\end{document}
