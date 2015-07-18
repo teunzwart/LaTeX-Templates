@@ -1,4 +1,6 @@
 *.aux
+*.bbl
+*.blg
 *.fdb_latexmk
 *.fls
 *.log
@@ -7,5 +9,3 @@
 *.snm
 *.synctex.gz
 *.toc
-*.blg
-*.bbl
