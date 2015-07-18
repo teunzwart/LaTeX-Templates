@@ -1,4 +1,6 @@
 \RequirePackage[l2tabu, orthodox]{nag} % Warn about outdated commands/packages.
+% The report class uses some outdated commands, about which nag will complain.
+% You can just ignore these warnings.
 
 \documentclass[11pt, a4paper]{report} % Sets font and paper size.
 
@@ -29,6 +31,7 @@
 
 %%% Additional options %%%
 \pagestyle{fancy} % Set header style.
+\setlength{\headheight}{14pt}
 
 %%% Personal Information %%%
 \newcommand\TITLE{Thesis Title}
@@ -36,20 +39,21 @@
 \newcommand\AUTHOR{Richard Philip Feynman}
 \newcommand\SUPERVISOR{Prof.\ John Wheeler}
 \newcommand\UNIVERSITYLOGO{} % Comment out line below and add name of logo file.
+\newcommand\BIBLIOGRAPHY{}
 
 
 \begin{document}
 
 \begin{titlepage}
 	\begin{center}
-		\vspace*{1cm}
+		% \includegraphics[width=\textwidth]{\UNIVERSITYLOGO}
 		\rule{\textwidth}{0.4mm}\\[0.5cm]
 		\huge{\textbf{\TITLE}}
 		\rule{\textwidth}{0.4mm}\\[0.5cm]
 		\Large{\THESISFORM}\\[0.5cm]
 		\begin{minipage}[t]{0.4\textwidth}
 			\begin{flushleft}
-			\large\emph{Author:}\\{\AUTHOR}
+				\large\emph{Author:}\\{\AUTHOR}
 			\end{flushleft}
 		\end{minipage}
 		\begin{minipage}[t]{0.4\textwidth}
@@ -58,8 +62,7 @@
 			\end{flushright}
 		\end{minipage}
 		\vfill
-		\large \today
-		% \includegraphics[width=\textwidth]{\UNIVERSITYLOGO}
+		\large \today\\
 	\end{center}
 \end{titlepage}
 
@@ -91,6 +94,13 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \begin{equation}
 	E = mc ^ 2
 \end{equation}
+%
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.
 
 
 \chapter{The Second Chapter}
@@ -105,6 +115,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 % Set style to abbrv to get Vancouver style citations.
 \bibliographystyle{abbrv}
-% \bibliography{}
+\IfFileExists{\BIBLIOGRAPHY.bib}{\bibliography{\BIBLIOGRAPHY}}
 
 \end{document}

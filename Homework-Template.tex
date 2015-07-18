@@ -46,6 +46,7 @@
 \newcommand\COURSE{Physics 101}
 \newcommand\GROUP{A}
 \newcommand\HWNUMBER{1}
+\newcommand\BIBLIOGRAPHY{}
 
 
 \begin{document}
@@ -60,8 +61,8 @@ dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-% Set the style and name of your .bib file here. Set style to abbrv to get Vancouver style.
-\bibliographystyle{abbrev}
-% \bibliography{}
+% Set the style of your .bib file here. Set style to abbrv to get Vancouver style.
+\bibliographystyle{abbrv}
+\IfFileExists{\BIBLIOGRAPHY.bib}{\bibliography{\BIBLIOGRAPHY}}
 
 \end{document}
