@@ -4,6 +4,7 @@
 \documentclass[11pt, a4paper]{beamer}
 \usetheme{CambridgeUS}
 \usecolortheme{orchid}
+\beamertemplatenavigationsymbolsempty % Disable navigation bar.
 
 % If you wise to create a handout, add 'handout' to the list of options for
 % 'documentclass' and uncomment the 'pgfpagesuselayout' line.
@@ -15,7 +16,6 @@
 \usepackage[dutch, english]{babel} % Language specific quirks.
 \usepackage{booktabs} % Improved tables.
 \usepackage[font=small]{caption} % Better caption formatting.
-\usepackage{fancyhdr} % Modification of headers and footers.
 \usepackage[T1]{fontenc} % Makes one unicode character of special input (e.g. ö).
 \usepackage{float} % More control over image positions.
 \usepackage{graphicx} % Include graphics. Use '\graphicspath' to locate files in a different folder.
@@ -27,7 +27,7 @@
 \usepackage{url} % Allow inclusion of urls in text.
 \usepackage{siunitx} % SI unit formatting and scientific notation.
 \usepackage{subcaption} % Allow subcaptions.
-\usepackage{todonotes} % Add todo notes.
+\usepackage[colorinlistoftodos]{todonotes} % Add todo notes.
 \usepackage{cleveref} % Automate "equation (...)" reference.
 
 %%% Physics packages %%%
