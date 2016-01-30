@@ -17,6 +17,7 @@
 \usepackage{lmodern} % Alternative font because 'fontenc' package does not work with default.
 \usepackage{microtype} % Improves character spacing.
 \usepackage{natbib} % Provides (author, year) references. \citet: textual, \citep: parenthetical
+\usepackage{physics} % Provides physics macros such as Dirac notation.
 \usepackage{tikz} % Draw diagrams and figures.
 \usepackage{url} % Allow inclusion of urls in text.
 \usepackage{siunitx} % SI unit formatting and scientific notation.
@@ -25,12 +26,8 @@
 \usepackage{varioref} % Automatically put reference to page in reference. Use \vref.
 \usepackage{cleveref} % Automate "equation (...)" reference. Use \vref.
 
-%%% Physics packages %%%
-\usepackage{braket} % Dirac bracket notation.
-
 %%% Custom commands %%%
-% Header for current exercise.
-\newcommand{\exercise}[1]{\vspace{1 em} \hrule \vspace{0.5 em} \textbf{Exercise #1} \vspace{0.5 em} \hrule \vspace{1 em}}
+\newcommand{\exercise}[1]{\vspace{1 em} \hrule \vspace{0.5 em} \textbf{Exercise #1} \vspace{0.5 em} \hrule \vspace{1 em}} % Header for current exercise.
 \newcommand{\subexercise}[1]{(\textbf{#1})} % Marker for current sub exercise.
 
 %%% Formatting %%%
