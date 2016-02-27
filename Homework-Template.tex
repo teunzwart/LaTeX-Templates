@@ -32,7 +32,6 @@
 
 %%% Formatting %%%
 \setlength{\headheight}{1.35em} % Set header height.
-\setlength{\parindent}{0pt} % No paragraph indentation.
 \pagestyle{fancy} % Set 'fancyhdr' as default style.
 \fancyhf{} % Clear headers.
 \lhead{\COURSE{}: HW\HWNUMBER{}} % Content in left part of header.
@@ -45,7 +44,6 @@
 \newcommand\COURSE{Physics 101}
 \newcommand\GROUP{A}
 \newcommand\HWNUMBER{1}
-\newcommand\BIBLIOGRAPHY{}
 
 
 \begin{document}
@@ -62,6 +60,6 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 % Set the style of your .bib file here. Set style to abbrv to get Vancouver style.
 \bibliographystyle{abbrv}
-\IfFileExists{\BIBLIOGRAPHY.bib}{\bibliography{\BIBLIOGRAPHY}}
+% \bibliography{}
 
 \end{document}
